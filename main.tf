@@ -1,15 +1,15 @@
 module "ha_proxy" {
-  source      = "./proxmox_vm_module"
+  source       = "./proxmox_vm_module"
   vm_disk_size = "40G"
-  base_ip     = 20
-  vm_counts   = 2
-  vm_memory   = 1024 * 2
-  vm_vmid     = 1000
-  pm_host     = var.pm_host
-  pm_user     = var.pm_user
-  pm_password = var.pm_password
-  pm_node     = var.pm_node
-  pm_api_url  = var.pm_api_url
+  base_ip      = 20
+  vm_counts    = 2
+  vm_memory    = 1024 * 2
+  vm_vmid      = 1000
+  pm_host      = var.pm_host
+  pm_user      = var.pm_user
+  pm_password  = var.pm_password
+  pm_node      = var.pm_node
+  pm_api_url   = var.pm_api_url
 }
 
 module "k8s_master" {
