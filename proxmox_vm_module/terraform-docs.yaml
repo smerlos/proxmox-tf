@@ -1,0 +1,15 @@
+# terraform-docs.yaml
+formatter: markdown
+header-from: main.tf
+sections:
+  hide-all: false
+  show:
+    - header
+    - inputs
+    - outputs
+    - providers
+    - requirements
+    - resources
+output:
+  file: README.md
+  mode: inject

@@ -1,0 +1,19 @@
+#cloud-config
+
+hostname: "${hostname}"
+fqdn: "${hostname}"
+prefer_fqdn_over_hostname: true
+users:
+  ${users_yaml}
+random_seed:
+  file: /dev/urandom
+  command: ["pollinate", "-r", "-s", "https://entropy.ubuntu.com"]
+  command_required: true
+package_upgrade: true
+packages:
+  ${packages_yaml}
+runcmd:
+  ${runcmd_yaml}
+power_state:
+  timeout: 5
+  mode: reboot
