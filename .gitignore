@@ -48,7 +48,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# custom files
 proxmox_vm_module/cloud-inits/*.yml
-scripts/**
 terraform-plugin-proxmox.log
 inventory.yaml
